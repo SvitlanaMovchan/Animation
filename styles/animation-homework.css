@@ -1,0 +1,237 @@
+body {
+	margin: 0;
+	font-family: arial, sans-serif;
+	background-color: #f3ffff;
+}
+
+
+.heading {
+	position: relative;
+	margin: 0 auto;
+}
+.heading h2 {
+	font-size: 34px;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+.heading h4 {
+	font-size: 14px;
+	color: grey;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.heading span {
+	padding-bottom: 12px;
+	border-bottom: 1.5px solid green;
+}
+
+#buttons {
+	margin: 60px auto 0 auto;
+	text-align: center;
+}
+
+#buttons button {
+	background-color: #f3ffff;
+	border: none;
+	margin: 0 20px;
+	color: grey;
+}
+
+#buttons .allButton:hover {
+		width: 50px;
+		height: 35px;
+		background-color: red;
+		color: yellow;
+		border-radius: 10px;
+}
+
+
+#buttons .designButton:hover {
+		width: 70px;
+		height: 35px;
+		background-color: pink;
+		color: black;
+		border-radius: 10px;
+		text-decoration: underline;
+		font-weight: bold;
+}
+
+#buttons .codeButton:hover {
+		width: 40px;
+		height: 35px;
+		background-color: #ee82ee;
+		color: #6a5acd;
+		border-radius: 20px;
+}
+
+#buttons .photographyButton:hover {
+		width: 90px;
+		height: 35px;
+		background-color: #ffa500;
+		color: black;
+		border-radius: 20px;
+		font-weight: bold;
+}
+
+#buttons .appsButton:hover {
+		width: 55px;
+		height: 55px;
+		background-color: blue;
+		color: white;
+		font-size: 20px;
+		border-radius: 55px;
+}
+
+#portfolio {
+	width: 1300px;
+	padding: 50px 100px;
+	margin: auto;
+}
+
+#portfolio .portfolioItem {
+	margin: 15px 15px;
+	width: 270px;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#portfolio .portfolioItem img {
+	width: 100%;
+	height: 100%;
+	transition: transform 1s
+}
+
+#portfolio .portfolioItem .portfolioItem-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: #30d5c8;
+	opacity: 0.5;
+	text-align: center;
+	position: absolute;
+	top:0;
+	left: 0;
+	transition: transform 1s;
+	transition-timing-function: linear;
+	z-index: 10;
+}
+
+#portfolio .portfolioItem .portfolioItem-overlay h5{
+	font-size: 16px;
+	font-weight: lighter;
+	color: white;
+	margin: 0;
+	text-align: center;
+	margin-top: 85px;
+}
+
+#portfolio .portfolioItem .portfolioItem-overlay p {
+	font-size: 12px;
+	margin: 0;
+	text-align: center;
+	margin-top: 10px;
+}
+
+
+#portfolio .portfolioItem:first-child .portfolioItem-overlay {
+	transform: translateY(-200px);
+}
+
+#portfolio .portfolioItem:first-child:hover .portfolioItem-overlay {
+	transform: translateY(0);
+}
+
+#portfolio .portfolioItem:nth-child(2) .portfolioItem-overlay {
+	transform: translateY(200px);
+}
+
+#portfolio .portfolioItem:nth-child(2):hover .portfolioItem-overlay {
+	transform: translateY(0);
+}
+
+#portfolio .portfolioItem:nth-child(3) .portfolioItem-overlay {
+	transform: translateX(270px);
+}
+
+#portfolio .portfolioItem:nth-child(3):hover .portfolioItem-overlay {
+	transform: translateX(0);
+}
+
+#portfolio .portfolioItem:nth-child(4) .portfolioItem-overlay {
+	transform: translateX(-270px);
+}
+
+#portfolio .portfolioItem:nth-child(4):hover .portfolioItem-overlay {
+	transform: translateX(0);
+}
+
+#portfolio .portfolioItem:nth-child(5) .portfolioItem-overlay {
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+#portfolio .portfolioItem:nth-child(5):hover .portfolioItem-overlay {
+	opacity: 0.5; 
+}
+
+#portfolio .portfolioItem:nth-child(6) .portfolioItem-overlay {
+	transform: translate(-270px, -200px);
+	
+}
+
+#portfolio .portfolioItem:nth-child(6):hover .portfolioItem-overlay {
+	transform: translate(0);
+}
+
+
+#portfolio .portfolioItem:nth-child(7) .portfolioItem-overlay {
+	height: 100px;
+	transform: translateY(-100px);	
+}
+
+#portfolio .portfolioItem:nth-child(7):hover .portfolioItem-overlay {
+	transform: translateY(0);
+}
+
+
+#portfolio .portfolioItem:nth-child(7) .portfolioItem-overlay h5,
+#portfolio .portfolioItem:nth-child(7) .portfolioItem-overlay p{
+	visibility: hidden;
+	transition-delay: 1s;
+}
+
+#portfolio .portfolioItem:nth-child(7):hover .portfolioItem-overlay h5,
+#portfolio .portfolioItem:nth-child(7):hover .portfolioItem-overlay p{
+	visibility: visible;
+}
+
+
+
+#portfolio .portfolioItem:nth-child(8) .portfolioItem-overlay {
+	transform: rotateY(90deg);
+}
+
+#portfolio .portfolioItem:nth-child(8):hover .portfolioItem-overlay {
+	transform: rotateY(0);
+}
+
+#portfolio .portfolioItem:nth-child(8) .portfolioItem-overlay h5,
+#portfolio .portfolioItem:nth-child(8) .portfolioItem-overlay p{
+	visibility: hidden;
+	transition-delay: 1s;
+}
+
+#portfolio .portfolioItem:nth-child(8):hover .portfolioItem-overlay h5,
+#portfolio .portfolioItem:nth-child(8):hover .portfolioItem-overlay p{
+	visibility: visible;
+}
+
+
+
+
+
