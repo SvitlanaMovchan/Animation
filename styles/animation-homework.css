@@ -4,6 +4,159 @@ body {
 	background-color: #f3ffff;
 }
 
+.animation {
+	background-color: pink;
+	animation-name: animation;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	width: 100%;
+	height: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 15;
+}
+
+@keyframes animation {
+	0% {
+		height: 100vh;
+	}
+	100% {
+		height: 100vh;
+	}
+}
+
+
+.square {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation-name: square;
+	animation-duration: 1s;
+	animation-iteration-count: 3;
+	animation-timing-function: linear;
+}
+
+@keyframes square {
+	0% {
+		transform: rotate(0);
+		background-color: red;
+	}
+	100% {
+		transform: rotate(360deg);
+		background-color: red;
+	}
+}
+
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  position: absolute;
+  margin: auto;
+  animation-name: circle;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  z-index: 10;
+
+}
+
+@keyframes circle {
+	0%{
+		top: 25%;
+		left: 50%;
+		background-color: yellow;
+		transform: scale(0.5, 0.5);
+	
+	}
+	25%{
+		top: 50%;
+		left: 80%;
+		background-color: violet;
+		transform: scale(1, 1);
+	
+	}
+	50%{
+		top: 75%;
+		left: 50%;
+		background-color: blue;
+		transform: scale(2, 2);
+
+	}
+	75%{
+		top: 50%;
+		left: 20%;
+		background-color: red;
+		transform: scale(1, 1);
+
+	}
+	100%{
+		top: 25%;
+		left: 50%;
+		background-color: green;
+		transform: scale(0.5, 0.5);
+
+	}
+}
+
+.circle2 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	border-radius: 50px;
+	animation-name: circle2;
+	animation-duration: 1.5s;
+	animation-iteration-count: 2;
+	animation-timing-function: linear;
+}
+
+@keyframes circle2 {
+	0% {
+		transform: rotate(0);
+		border-top: 2px solid red;
+		background-color: lightgreen;
+	}
+	100% {
+		transform: rotate(360deg);
+		border-top: 2px solid red;
+		background-color: lightgreen;
+	}
+}
+
+
+.circle3 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 60%;
+	border-radius: 50px;
+	animation-name: circle3;
+	animation-duration: 1.5s;
+	animation-iteration-count: 2;
+	animation-timing-function: linear;
+	animation-direction: reverse;
+}
+
+@keyframes circle3 {
+0% {
+		transform: rotate(0);
+		border-top: 2px solid red;
+		background-color: lightgreen;
+	}
+	100% {
+		transform: rotate(360deg);
+		border-top: 2px solid red;
+		background-color: lightgreen;
+	}
+}
 
 .heading {
 	position: relative;
@@ -37,57 +190,46 @@ body {
 #buttons button {
 	background-color: #f3ffff;
 	border: none;
-	margin: 0 20px;
+	margin: 0 10px;
 	color: grey;
+	padding: 0 15px;
+	height: 35px;
 }
 
 #buttons .allButton:hover {
-		width: 50px;
-		height: 35px;
 		background-color: red;
 		color: yellow;
 		border-radius: 10px;
 }
 
 
-#buttons .designButton:hover {
-		width: 70px;
-		height: 35px;
+#buttons .designButton:hover {	
 		background-color: pink;
 		color: black;
 		border-radius: 10px;
 		text-decoration: underline;
-		font-weight: bold;
 }
 
 #buttons .codeButton:hover {
-		width: 40px;
-		height: 35px;
 		background-color: #ee82ee;
 		color: #6a5acd;
 		border-radius: 20px;
 }
 
 #buttons .photographyButton:hover {
-		width: 90px;
-		height: 35px;
 		background-color: #ffa500;
 		color: black;
 		border-radius: 20px;
-		font-weight: bold;
 }
 
 #buttons .appsButton:hover {
-		width: 55px;
-		height: 55px;
 		background-color: blue;
 		color: white;
-		font-size: 20px;
-		border-radius: 55px;
+		border-radius: 35px;
 }
 
 #portfolio {
-	width: 1300px;
+	width: 1220px;
 	padding: 50px 100px;
 	margin: auto;
 }
@@ -189,25 +331,40 @@ body {
 }
 
 
-#portfolio .portfolioItem:nth-child(7) .portfolioItem-overlay {
-	height: 100px;
-	transform: translateY(-100px);	
+#portfolio .portfolioItem:nth-child(7)::after .portfolioItem-overlay,
+#portfolio .portfolioItem:nth-child(7)::before .portfolioItem-overlay {
+	content: '';
+	width: 0;
+	height: 200px;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+	transition: width 1s;
 }
 
-#portfolio .portfolioItem:nth-child(7):hover .portfolioItem-overlay {
-	transform: translateY(0);
+#portfolio .portfolioItem:nth-child(7)::after .portfolioItem-overlay {
+	right: 0;
+}
+
+#portfolio .portfolioItem:nth-child(7)::before .portfolioItem-overlay {
+	left: 0;
+}
+
+#portfolio .portfolioItem:nth-child(7):hover::before .portfolioItem-overlay,
+#portfolio .portfolioItem:nth-child(7):hover::after .portfolioItem-overlay {
+	width: 135px;
 }
 
 
 #portfolio .portfolioItem:nth-child(7) .portfolioItem-overlay h5,
 #portfolio .portfolioItem:nth-child(7) .portfolioItem-overlay p{
-	visibility: hidden;
+	opacity: 0;
 	transition-delay: 1s;
 }
 
 #portfolio .portfolioItem:nth-child(7):hover .portfolioItem-overlay h5,
 #portfolio .portfolioItem:nth-child(7):hover .portfolioItem-overlay p{
-	visibility: visible;
+	opacity: 1;
 }
 
 
